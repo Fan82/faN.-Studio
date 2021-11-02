@@ -162,6 +162,32 @@ header h1 {
     z-index: 999;
 }
 
+/* phone*/
+@media (max-width: 767px) {
+    .header_nav {
+        padding: 10px;
+    }
+
+    header h1,
+    .nav-item {
+        display: none;
+    }
+}
+
+/* iPad */
+@media (min-width: 768px) {
+    .header_nav {
+        padding: 10px 30px;
+    }
+
+    header h1 {
+        width: 60px;
+        margin: 10px auto;
+    }
+}
+
+
+
 .nav_menu a {
     border: 1px solid transparent;
 }
@@ -301,36 +327,151 @@ header h1 {
 
 .main_content {
     width: 100%;
-    font-size: 2rem;
+    font-size: 1.4rem;
     position: absolute;
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
+    height: 100vh;
+    justify-content: center;
+}
+
+.typing-demo {
+    width: 11ch;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 1px solid;
+    font-family: 'Heebo', serif;
+
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent
+    }
 }
 
 .main_banner img {
-    height: 93vh;
+    height: 91vh;
     opacity: .3;
 }
-.mainline {
-    width: 30%;
-    height: 1px;
-    background-color: #44423b52;
+
+
+/* toggle */
+.mobile-wrap {
+    float: right;
+    width: 100vw;
+    height: 534px;
+    overflow: hidden;
     position: relative;
-    animation-name: mainline;
-    animation-duration: 2s;
-    animation-delay: 1s;
-    animation-fill-mode: both;
-    transition: transform 0.2s ease-in;
 }
-@keyframes mainline{
-    form{
-        left: 0; background-color: #44423b52; opacity: 0;
-    }
-    to{
-        left: 200px; background-color: #44423b52; opacity: 1;
+
+.mobile-wrap:before {
+    content: '';
+    position: absolute;
+}
+
+.mobile {
+    z-index: 99;
+    color: rgba(255, 255, 255, 0.37);
+    height: 100%;
+    position: relative
+}
+
+.mobile .header {
+    clear: both;
+    overflow: hidden;
+    position: relative;
+    float: right;
+}
+
+.mobile .header>span {
+    font-size: 24px;
+    min-width: 24px
+}
+
+.mobile .header>.title {
+    font-size: 16px;
+    line-height: 24px;
+    margin-left: 15px
+}
+
+.mobile .header .ion-ios-navicon>i {
+    height: 1px;
+    width: 20px;
+    margin-top: 5px;
+    background: rgb(44, 44, 44);
+    position: relative;
+    display: inline-block
+}
+
+.mobile .header .ion-ios-navicon>i:after,
+.mobile .header .ion-ios-navicon>i:before {
+    content: '';
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    background: inherit;
+}
+
+.mobile .header .ion-ios-navicon>i:before {
+    bottom: 12px
+}
+
+.mobile .header .ion-ios-navicon>i:after {
+    bottom: 6px
+}
+
+
+.sidebar .sidebar-content,
+.sidebar .sidebar-overlay {
+    top: 40px;
+    right: 0;
+    position: absolute;
+    transition: all .3s ease-in-out 0s
+}
+
+.sidebar .sidebar-content {
+    width: 80%;
+    padding: 40px;
+    z-index: 9999;
+    background: rgba(255, 255, 255, 0.39);
+    transform: translateX(100%)
+}
+
+.sidebar.active .sidebar-content {
+    transform: translateX(0)
+}
+
+.sidebar .sidebar-content .nav-left>a {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+/* iPad 平板會包含桌機版，因此桌機版要注意重新設定 */
+@media (min-width: 768px) {
+    .mobile-wrap {
+        display: none;
     }
 }
+
+/* PC */
+@media (min-width: 992px) {
+    .mobile-wrap {
+        display: none;
+    }
+}
+
+/* toggle */
+
+
 /* ------------------- */
 /* about */
 /* ------------------- */
@@ -341,18 +482,6 @@ header h1 {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-}
-
-.about_name {
-    display: flex;
-    align-items: flex-end;
-    margin: 10px auto;
-}
-
-.about_name h2,
-.about_name p {
-    writing-mode: vertical-rl;
-    margin: 5px;
 }
 
 .about_fav {
@@ -379,7 +508,8 @@ header h1 {
     width: 32px;
     margin: 5px;
 }
-.portfolio{
+
+.portfolio {
     display: inline-block;
     margin: 20% auto;
     opacity: .2;
@@ -387,6 +517,7 @@ header h1 {
     width: 70%;
     z-index: 1;
 }
+
 /* Code pen */
 
 .timeline {
@@ -394,7 +525,6 @@ header h1 {
     top: 30%;
     right: 0;
     max-width: 46em;
-    z-index: 9;
 }
 
 .timeline:before {
@@ -421,11 +551,16 @@ header h1 {
 }
 
 .timeline-event-copy {
-    padding: 2em;
+    padding: 20px;
     position: relative;
     left: 4em;
     width: 80%;
 }
+
+.timeline-event-copy:hover {
+    background-color: #eae4df7a;
+}
+
 .timeline-event-copy h4 {
     font-size: 1.2em;
     margin-bottom: 1.2em;
@@ -434,10 +569,12 @@ header h1 {
 .timeline-event-copy p:not(.timeline-event-thumbnail) {
     padding-bottom: 1.2em;
 }
-.timeline-event-copy li{
+
+.timeline-event-copy li {
     list-style-type: disc;
     line-height: 1.8;
 }
+
 .timeline-event-icon {
     transition: transform 0.2s ease-in;
     background-color: #b5b4b4;
@@ -459,8 +596,86 @@ header h1 {
     box-shadow: inset 0 0 0 0em #211f17;
     display: inline-block;
     margin-bottom: 1.2em;
-    padding: 0.25em 1em 0.2em 1em;
+    padding: 0.2em 1em;
 }
+
+
+
+/* phone*/
+@media (max-width: 767px) {
+    .about_big p {
+        font-size: 4rem;
+    }
+
+    .about_fav h4 {
+        font-size: 14px;
+    }
+
+    .timeline {
+        top: 30%;
+    }
+
+    .timeline-event-copy li {
+        font-size: 14px;
+    }
+
+    .about_name h2 {
+        font-size: 30px;
+    }
+
+    .about_name p,
+    .about_fav p {
+        font-size: 16px;
+        padding: 5px;
+    }
+
+    .icon {
+        width: 22px;
+    }
+
+    .timeline-event-copy h3 {
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+
+    .timeline-event-copy h4 {
+        font-size: 12px;
+        font-weight: lighter;
+    }
+
+    .timeline-event {
+        margin-bottom: 20px;
+    }
+
+    .timeline-event-thumbnail {
+        margin-bottom: 5px;
+        font-size: 12px;
+    }
+}
+
+/* iPad 平板會包含桌機版，因此桌機版要注意重新設定 */
+@media (min-width: 768px) {
+    .about_name {
+        display: flex;
+        align-items: flex-end;
+        margin: 10px auto;
+    }
+
+    .about_name h2,
+    .about_name p {
+        writing-mode: vertical-rl;
+        margin: 5px;
+    }
+
+    .timeline {
+        top: 60%;
+    }
+}
+
+/* PC */
+@media (min-width: 992px) {}
+
+
 
 /* ------------------- */
 /* project nav */
@@ -486,7 +701,6 @@ header h1 {
     text-align: center;
     display: block;
     font-weight: lighter;
-
     border: 1px solid transparent;
 }
 
@@ -494,6 +708,46 @@ header h1 {
     font-weight: normal;
     color: #211f17;
 }
+
+
+/* phone*/
+@media (max-width: 767px) {
+    .p_menu li {
+        padding: 0 10px;
+        height: 20px;
+    }
+
+    .p_menu li a {
+        font-size: 12px;
+        text-decoration: none;
+        text-align: center;
+        display: block;
+        font-weight: lighter;
+        border: 1px solid transparent;
+    }
+
+    .p_ui,
+    .p_info {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin: 30px;
+    }
+
+    .p_web {
+        display: flex;
+        align-items: flex-end;
+        padding-left: 100px;
+        margin-bottom: 80px;
+    }
+}
+
+/* iPad 平板會包含桌機版，因此桌機版要注意重新設定 */
+@media (min-width: 768px) {}
+
+/* PC */
+@media (min-width: 992px) {}
+
 
 /* ------------------- */
 /* project */
@@ -504,7 +758,7 @@ header h1 {
     justify-content: flex-end;
     align-items: flex-end;
     flex-direction: column;
-    margin: 40px;
+    margin: 30px;
 }
 
 .p_ui_img,
@@ -1001,3 +1255,16 @@ figure p {
     padding: 10px;
     color: #848484;
 }
+
+
+
+/* RWD boostrap */
+
+/* phone*/
+@media (max-width: 767px) {}
+
+/* iPad 平板會包含桌機版，因此桌機版要注意重新設定 */
+@media (min-width: 768px) {}
+
+/* PC */
+@media (min-width: 992px) {}

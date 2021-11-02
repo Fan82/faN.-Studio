@@ -3,11 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, shrink-to-fit=no">
     <title>faN. Studio</title>
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <!-- header -->
     <header class="header_nav">
@@ -21,11 +22,29 @@
                     <li class="nav_menu"><a class="nav_btn" href="#">EN</a></li>
                 </ul>
             </nav>
-            <nav class="nav-item">
+            <!-- toggle -->
+            <div class="mobile-wrap">
+                <div class="mobile">
+                    <div class="header">
+                        <span class="ion-ios-navicon"><i></i></span>
+                    </div>
+                    <div class="sidebar">
+                        <div class="sidebar-content">
+                            <div class="nav-left">
+                                <a href="./about.html">ABOUT</a>
+                                <a href="./project.html">PROJECT</a>
+                                <a href="./contact.html">CONTACT</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- toggle -->
+            <nav class="nav-item" id="menu">
                 <ul>
-                    <li class="nav_menu"><a class="nav_btnA" href="./about.html">ABOUT</a></li>
-                    <li class="nav_menu"><a class="nav_btnP" href="./project.html">PROJECT</a></li>
-                    <li class="nav_menu"><a class="nav_btnC" href="./contact.html">CONTACT</a></li>
+                    <li class="nav_menu" id="#about"><a class="nav_btnA" href="./about.html">ABOUT</a></li>
+                    <li class="nav_menu" id="#project"><a class="nav_btnP" href="./project.html">PROJECT</a></li>
+                    <li class="nav_menu" id="#contact"><a class="nav_btnC" href="./contact.html">CONTACT</a></li>
                 </ul>
             </nav>
         </div>
@@ -36,12 +55,8 @@
         <section>
             <div class="main_banner">
                 <div class="main_content">
-                    <div class="main_number">
-                        <p>1995</p>
-                    </div>
-                    <div class="mainline"></div>
-                    <div class="main_number">
-                        <p>2021</p>
+                    <div class="typing-demo">
+                        1995 - 2021
                     </div>
                 </div>
                 <img src="./img/faN_banner2.jpg" alt="faN. Studio">
@@ -71,4 +86,5 @@
     <script src="./js/script.js"></script>
 
 </body>
+
 </html>
