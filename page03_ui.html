@@ -8,6 +8,7 @@
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <!-- header -->
     <header class="header_nav">
@@ -15,15 +16,6 @@
             <a href="./index.html"><img src="./img/logo/faN_logo.png" alt="faN. Studio"></a>
         </h1>
         <div class="main_nav">
-            <nav class="nav-item">
-                <ul>
-                    <li class="nav_menu">
-                        <a class="nav_btn" href="#">中</a>
-                    </li>
-                    <li class="nav_menu">
-                        <a class="nav_btn" href="#">EN</a>
-                </ul>
-            </nav>
             <nav class="nav-item">
                 <ul>
                     <li class="nav_menu">
@@ -38,6 +30,28 @@
                 </ul>
             </nav>
         </div>
+        <nav class="nav_s">
+            <div id="menuToggle">
+                <input type="checkbox">
+                <span></span>
+                <span></span>
+                <span></span>
+                <ul id="menu">
+                    <a href="./index.html">
+                        <li>Home</li>
+                    </a>
+                    <a href="./about.html">
+                        <li>About</li>
+                    </a>
+                    <a href="./project.html">
+                        <li>Project</li>
+                    </a>
+                    <a href="./contact.html">
+                        <li>Contact</li>
+                    </a>
+                </ul>
+            </div>
+        </nav>
     </header>
     <!-- end header -->
     <!-- main -->
@@ -49,23 +63,25 @@
                 <li><a href="./project_graphic.html">[ Graphic Design ]</a></li>
             </ul>
         </section>
-        <div class="page_main ui03">
-            <h2>Plan Plant. Shop | UI Design</h2>
-            <p>Let plants regenerate like fairies. Appearing in the alleys of Taipei, as long as you pass our shop, Busy days,
-                <br>I always forget to stay in the neighborhood surrounded by flowers.</p>
+        <div class="page_main">
+            <h2>Plan Plant. Shop</h2>
+            <p>Let plants regenerate like fairies. Appearing in the alleys of Taipei, as long as you pass our shop, Busy
+                days,
+                <br>I always forget to stay in the neighborhood surrounded by flowers.
+            </p>
             <img class="box" src="./img/ui/plan/plan plant.png" alt="Plan plant">
         </div>
         <div class="page_second box">
+            <div class="page_info_s">
+                <h4>Service Design Process</h4>
+            </div>
             <div class="page_info_picture">
                 <img src="./img/ui/plan/iPad.png" alt="Plan plant">
-            </div>
-            <div class="page_info_s">
-                <h4>Service<br>Design Process</h4>
             </div>
         </div>
         <div class="page_third box">
             <div class="page_info">
-                 <h3 class="info_list_tit">Design Note</h3>
+                <h3 class="info_list_tit">Design Note</h3>
             </div>
             <div class="page_info_picture_s_ui01">
                 <img src="./img/ui/plan/typo.png" alt="Plan plant">
@@ -86,7 +102,7 @@
         </div>
     </footer>
     <!-- end footer -->
-    
+
 
     <!-- script -->
     <!-- jquery原生碼 CDN -->
@@ -97,4 +113,5 @@
     <script src="./js/script.js"></script>
 
 </body>
+
 </html>

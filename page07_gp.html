@@ -8,6 +8,7 @@
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <!-- header -->
     <header class="header_nav">
@@ -15,15 +16,6 @@
             <a href="./index.html"><img src="./img/logo/faN_logo.png" alt="faN. Studio"></a>
         </h1>
         <div class="main_nav">
-            <nav class="nav-item">
-                <ul>
-                    <li class="nav_menu">
-                        <a class="nav_btn" href="#">中</a>
-                    </li>
-                    <li class="nav_menu">
-                        <a class="nav_btn" href="#">EN</a>
-                </ul>
-            </nav>
             <nav class="nav-item">
                 <ul>
                     <li class="nav_menu">
@@ -38,6 +30,28 @@
                 </ul>
             </nav>
         </div>
+        <nav class="nav_s">
+            <div id="menuToggle">
+                <input type="checkbox">
+                <span></span>
+                <span></span>
+                <span></span>
+                <ul id="menu">
+                    <a href="./index.html">
+                        <li>Home</li>
+                    </a>
+                    <a href="./about.html">
+                        <li>About</li>
+                    </a>
+                    <a href="./project.html">
+                        <li>Project</li>
+                    </a>
+                    <a href="./contact.html">
+                        <li>Contact</li>
+                    </a>
+                </ul>
+            </div>
+        </nav>
     </header>
     <!-- end header -->
     <!-- main -->
@@ -50,7 +64,7 @@
             </ul>
         </section>
         <div class="page_main">
-            <h2>Baygo | Logo Design</h2>
+            <h2>Baygo</h2>
             <p>Bread is like our child, you are like our family.</p>
         </div>
         <section class="gd">
@@ -61,7 +75,9 @@
                 </div>
                 <div class="baygo_gd box">
                     <div class="baygo_typo">
-                        <div><h3>Typographic</h3></div>
+                        <div>
+                            <h3>Typographic</h3>
+                        </div>
                         <div class="typo_info">
                             <div class="font_box">
                                 <div class="font">Aa</div>
@@ -72,11 +88,16 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="par_box"><p>allows you to see how the weight and width styles of Myriad Pro can interact as you adjust each property.</p></div>
+                            <div class="par_box">
+                                <p>allows you to see how the weight and width styles of Myriad Pro can interact as you
+                                    adjust each property.</p>
+                            </div>
                         </div>
                     </div>
                     <div class="baygo_typo">
-                        <div><h3>Color</h3></div>
+                        <div>
+                            <h3>Color</h3>
+                        </div>
                         <div class="color_list">
                             <div class="baygo_color" style="color: #fff ; background-color: #8B8076;">#8B8076</div>
                             <div class="baygo_color" style="color: #fff ; background-color: #B58F55;">#B58F55</div>
@@ -107,7 +128,7 @@
         </div>
     </footer>
     <!-- end footer -->
-    
+
 
     <!-- script -->
     <!-- jquery原生碼 CDN -->
@@ -117,4 +138,5 @@
     <!-- 自己寫的js放在最下方 -->
     <script src="./js/script.js"></script>
 </body>
+
 </html>

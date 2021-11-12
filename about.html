@@ -19,33 +19,6 @@
             <nav class="nav-item">
                 <ul>
                     <li class="nav_menu">
-                        <a class="nav_btn" href="#">中</a>
-                    </li>
-                    <li class="nav_menu">
-                        <a class="nav_btn" href="#">EN</a>
-                </ul>
-            </nav>
-            <!-- toggle -->
-            <div class="mobile-wrap">
-                <div class="mobile">
-                    <div class="header">
-                        <span class="ion-ios-navicon"><i></i></span>
-                    </div>
-                    <div class="sidebar">
-                        <div class="sidebar-content">
-                            <div class="nav-left">
-                                <a href="./about.html">ABOUT</a>
-                                <a href="./project.html">PROJECT</a>
-                                <a href="./contact.html">CONTACT</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- toggle -->
-            <nav class="nav-item">
-                <ul>
-                    <li class="nav_menu">
                         <a class="nav_btnA" href="./about.html">ABOUT</a>
                     </li>
                     <li class="nav_menu">
@@ -57,6 +30,28 @@
                 </ul>
             </nav>
         </div>
+        <nav class="nav_s">
+            <div id="menuToggle">
+                <input type="checkbox">
+                <span></span>
+                <span></span>
+                <span></span>
+                <ul id="menu">
+                    <a href="./index.html">
+                        <li>Home</li>
+                    </a>
+                    <a href="./about.html">
+                        <li>About</li>
+                    </a>
+                    <a href="./project.html">
+                        <li>Project</li>
+                    </a>
+                    <a href="./contact.html">
+                        <li>Contact</li>
+                    </a>
+                </ul>
+            </div>
+        </nav>
     </header>
     <!-- end header -->
     <!-- main -->
@@ -86,71 +81,34 @@
                 </div>
             </div>
             <!-- 2 -->
-            <ul class="timeline">
-                <li class="timeline-event">
-                    <label class="timeline-event-icon"></label>
-                    <div class="timeline-event-copy">
-                        <p class="timeline-event-thumbnail">SEP 2017 - FEB 2018</p>
-                        <h3>Design Assistant | Global Art Center</h3>
-                        <h4>China. Guangzhou</h4>
-                        <ul>
-                            <li>Assist the designer to complete all designers</li>
-                            <li>Accompany designers to communicate with customers and record customer needs</li>
-                            <li>Responsible for contacting the owner and designer to discuss design changes</li>
-                            <li>Assistant designer administrative related business</li>
-                        </ul>
+            <div class="timeline-container" id="timeline-1">
+                <div class="timeline">
+                    <div class="timeline-item" data-text="2021.4 - 2021.10">
+                        <h4 class="timeline__content-title">Brand Designer</h4>
+                        <p class="timeline__content-desc">GoTrust Technology Company</p>
+                        <span>Taiwan. Taipei</span>
                     </div>
-                </li>
-                <li class="timeline-event">
-                    <label class="timeline-event-icon"></label>
-                    <div class="timeline-event-copy">
-                        <p class="timeline-event-thumbnail">APR 2018 - AUG 2018</p>
-                        <h3>Graphic Designer | Integrated Marketing Company</h3>
-                        <h4>Taiwan. Taoyuan</h4>
-                        <ul>
-                            <li>The main visual design of the company's products, EDM, and marketing activities</li>
-                            <li>Community management picture design (FB/IG)</li>
-                            <li>E-commerce channel/advertising banner design</li>
-                            <li>Support marketing production design</li>
-                            <li>Commodity display planning</li>
-                            <li>Assist in the planning of graphic design production, inquiry/finished product printing
-                            </li>
-                        </ul>
+                    <div class="timeline-item" data-text="2019.2 - 2021.3">
+                        <h4 class="timeline__content-title">WEB Designer</h4>
+                        <p class="timeline__content-desc">Hong Kong E-Commerce Company</p>
+                        <span>Taiwan. Taipei</span>
                     </div>
-                </li>
-                <li class="timeline-event">
-                    <label class="timeline-event-icon"></label>
-                    <div class="timeline-event-copy">
-                        <p class="timeline-event-thumbnail">FEB 2019 - MAR 2021</p>
-                        <h3>WEB Designer | Hong Kong E-Commerce Company</h3>
-                        <h4>Taiwan. Taipei</h4>
-                        <ul>
-                            <li>Website content maintenance: web design, banner design, EDM visual design</li>
-                            <li>Use drawing software to draw the designed picture, and combine the content with the
-                                picture to make a release version</li>
-                            <li>Implement the publishing art editing process and communicate with engineers</li>
-                            <li>Back-office operations of major network platforms (visual design, editing and
-                                beautification, merchandise removal, merchandise content beautification)</li>
-                        </ul>
+                    <div class="timeline-item" data-text="2018.2 - 2018.7">
+                        <h4 class="timeline__content-title">Graphic Designer</h4>
+                        <p class="timeline__content-desc">Integrated Marketing Company</p>
+                        <span>Taiwan. Taoyuan</span>
                     </div>
-                </li>
-                <li class="timeline-event">
-                    <label class="timeline-event-icon"></label>
-                    <div class="timeline-event-copy">
-                        <p class="timeline-event-thumbnail">APR 2021 - OCT 2021</p>
-                        <h3>Brand Designer | GoTrust Technology Company</h3>
-                        <h4>Taiwan. Taipei</h4>
-                        <ul>
-                            <li>Assist the designer to complete all designers</li>
-                            <li>Accompany designers to communicate with customers and record customer needs</li>
-                            <li>Responsible for contacting the owner and designer to discuss design changes</li>
-                            <li>Assistant designer administrative related business</li>
-                        </ul>
+                    <div class="timeline-item" data-text="2017.6 - 2018.2">
+                        <h4 class="timeline__content-title">Design Assistant</h4>
+                        <p class="timeline__content-desc">Global Art Center</p>
+                        <span>China. Guangzhou</span>
                     </div>
-                </li>
-            </ul>
+                </div>
+            </div>
         </div>
-        <figure class="portfolio"><img src="./img/about– 2.jpg" alt="portfolio photo"></figure>
+        <div class="bg_video">
+            <video src="./img/about.mp4" loop autoplay muted></video>
+        </div>
     </main>
     <!--end main -->
 

@@ -8,6 +8,7 @@
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <!-- header -->
     <header class="header_nav">
@@ -15,15 +16,6 @@
             <a href="./index.html"><img src="./img/logo/faN_logo.png" alt="faN. Studio"></a>
         </h1>
         <div class="main_nav">
-            <nav class="nav-item">
-                <ul>
-                    <li class="nav_menu">
-                        <a class="nav_btn" href="#">中</a>
-                    </li>
-                    <li class="nav_menu">
-                        <a class="nav_btn" href="#">EN</a>
-                </ul>
-            </nav>
             <nav class="nav-item">
                 <ul>
                     <li class="nav_menu">
@@ -38,6 +30,28 @@
                 </ul>
             </nav>
         </div>
+        <nav class="nav_s">
+            <div id="menuToggle">
+                <input type="checkbox">
+                <span></span>
+                <span></span>
+                <span></span>
+                <ul id="menu">
+                    <a href="./index.html">
+                        <li>Home</li>
+                    </a>
+                    <a href="./about.html">
+                        <li>About</li>
+                    </a>
+                    <a href="./project.html">
+                        <li>Project</li>
+                    </a>
+                    <a href="./contact.html">
+                        <li>Contact</li>
+                    </a>
+                </ul>
+            </div>
+        </nav>
     </header>
     <!-- end header -->
     <!-- main -->
@@ -50,17 +64,18 @@
             </ul>
         </section>
         <div class="page_main">
-            <h2>Search Hotel | UI Design</h2>
+            <h2>Search Hotel</h2>
             <p>connects millions of travelers to memorable experiences, a variety of transportation options,
-                <br>and incredible places to stay – from homes to hotels, and much more.</p>
+                <br>and incredible places to stay – from homes to hotels, and much more.
+            </p>
             <img class="box" src="./img/ui/search hotel/Booking Hotel home.jpg" alt="hotel booking web">
         </div>
         <div class="page_second box">
+            <div class="page_info_s">
+                <h4>About Search Hotel</h4>
+            </div>
             <div class="page_info_picture">
                 <img src="./img/ui/search hotel/Booking_left.png" alt="search hotel">
-            </div>
-            <div class="page_info_s">
-                <h4>About<br>Search Hotel</h4>
             </div>
         </div>
         <div class="page_third box">
@@ -91,9 +106,9 @@
         </div>
     </footer>
     <!-- end footer -->
-    
 
-    
+
+
     <!-- script -->
     <!-- jquery原生碼 CDN -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -102,4 +117,5 @@
     <!-- 自己寫的js放在最下方 -->
     <script src="./js/script.js"></script>
 </body>
+
 </html>
